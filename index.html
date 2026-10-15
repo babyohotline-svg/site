@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commission on Adoption</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: #0a0a0a;
+    color: #1a1a1a;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .terminal {
+    width: 100%;
+    max-width: 480px;
+    padding: 40px 24px;
+    border: 1px solid #1f1f1f;
+    background: #0d0d0d;
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+  }
+
+  .header {
+    color: #8B0000;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .title {
+    color: #d4d4d4;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #222;
+    padding-bottom: 16px;
+  }
+
+  .line {
+    color: #666;
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+
+  .line span {
+    color: #8B0000;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    color: #d4d4d4;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    padding: 8px 0;
+    letter-spacing: 2px;
+    outline: none;
+  }
+
+  input[type="text"]::placeholder {
+    color: #333;
+    letter-spacing: 1px;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    margin-top: 24px;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid #8B0000;
+    color: #8B0000;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .btn:hover {
+    background: #8B0000;
+    color: #0a0a0a;
+  }
+
+  .footer {
+    margin-top: 32px;
+    color: #222;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="terminal">
+
+  <div class="header">Commission on Adoption</div>
+  <div class="title">ПРОТОКОЛ ПЕРВИЧНОГО ДОПУСКА</div>
+
+  <div class="line">
+    Кандидат зарегистрирован.<br>
+    Требуется подтверждение личности.<br>
+    <span>Введите идентификатор из документа.</span>
+  </div>
+
+  <input type="text" id="code" placeholder="_ _ _ _ _ _ - _">
+
+  <button class="btn" onclick="check()">ПОДТВЕРДИТЬ</button>
+
+  <div class="footer">Исх. № 641\88-6 · ДСП</div>
+
+</div>
+
+<script>
+function check() {
+  var val = document.getElementById('code').value.trim();
+  if (val === '64188-6' || val === '64188—6' || val === '64188 6') {
+    window.location.href = 'https://t.me/+Nj4yZM6fSIVlNTEy';
+  } else {
+    document.getElementById('code').value = '';
+    document.getElementById('code').placeholder = 'ОШИБКА. ПОВТОРИТЕ ВВОД';
+  }
+}
+</script>
+
+</body>
+</html>
